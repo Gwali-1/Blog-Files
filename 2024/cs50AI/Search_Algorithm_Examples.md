@@ -39,12 +39,15 @@ Ok so now let's take a look at 4 algorithms in total grouped under 2 categories
 
 
 *Informed Search*
+---
 
 Simply put, an informed search algorithm is an algorthm that uses or applies problem specific knowledge to solve the problem. What that means is the algorithm does not attempt to solve the problem with intuition
 or solve it blind, it relies on certain important details about the problem it is solving at every decision point. Eg: considering the race of an individual when searching for a criminal suspect or
 how geograhically close a point is to a location when tring to plot directions to a it.
 
 *uninformed Search*
+---
+
 
 Uninformed search on the other hand is a search algorithm that does not have problem specific knowledge hence attempts to solve the search problem systematically.
 
