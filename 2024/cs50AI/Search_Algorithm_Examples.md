@@ -95,8 +95,8 @@ _Pseudocode for BFS looks like this_
 
 >> If not expand the node and add the children nodes to the frontier
 
-Note that the above pseudocode is simplified and, in some situations, to prevent a recursive node expansion situation where we keep adding nodes that have already been expanded back to the frontier
-we use a set data structure to keep track of all expanded nodes. So then any node that goes into the frontier must not be present in the set of expanded nodes.
+_Note that the above pseudocode is simplified and, in some situations, to prevent a recursive node expansion situation where we keep adding nodes that have already been expanded back to the frontier
+we use a set data structure to keep track of all expanded nodes. So then any node that goes into the frontier must not be present in the set of expanded nodes._
 
 2. _Depth First Search (DFS)_
 
