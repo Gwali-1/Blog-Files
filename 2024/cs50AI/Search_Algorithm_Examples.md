@@ -89,12 +89,16 @@ point.
 
 *Pseudocode for BFS looks like this*
 
-> 1. We start with a fronteir that contains the intitial state(our start point in the searc)
-> Enter a loop
->> Is the fronter empty? <br> if yes there is no solution to this problem . return
+> 1. We start with a fronteir that contains the intitial state(our start point in the search)
 
-> Take a node from the fronteir 
-> Check if this is the solution node by  doing a goal test on it 
+> 2. Enter a loop
+
+> 3. Is the fronter empty? 
+>> if yes there is no solution to this problem . return
+
+> 4. Take a node from the fronteir 
+
+> 5. Check if this is the solution node by  doing a goal test on it 
 >> if yes return node as the solution 
 >> if not expand the node and add the children nodes to the fronteir 
 
@@ -129,10 +133,10 @@ based on how little or small the value is as this value dictates how close or fa
 *Pseudocode for GBFS looks like this*
 
 > 1. We start with a fronteir that contains the intitial state(our start point in the searc)
-> Enter a loop
+> 2. Enter a loop
 >> Is the fronter empty? <br> if yes there is no solution to this problem . return
 
-> Take a node from the fronteir *with the smallest h(n) value*
+> 3. Take a node from the fronteir *with the smallest h(n) value*
 > Check if this is the solution node by  doing a goal test on it 
 >> if yes return node as the solution 
 >> if not expand the node and add the children nodes to the fronteir *based on the value as provided by h(n) / heurtistic *
