@@ -64,6 +64,8 @@ what type of algorithm is being used. This is because it affects things like how
 
 **Node Expansion:** Expanding a node means generating other nodes from it. A scenario is a point in your search where multiple decisions can be made, here every decision becomes a node.  ** Decision Point:** This is a point in your search where you have to choose which node to explore next.
 
+** Decision Point:** This is a point in your search where you have to choose which node to explore next.
+
 ---
 
 **Examples of uninformed search algorithms**
