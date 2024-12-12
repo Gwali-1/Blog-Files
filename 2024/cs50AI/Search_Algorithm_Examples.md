@@ -57,21 +57,21 @@ Before i explore examples of these algorithms ill define some terms in other to 
 
 components for context.
 ---
-*Agent:* An agent can be thought of an entity that acts on it's environement in particular state
+**Agent:** An agent can be thought of an entity that acts on it's environement in particular state
 
-*State:*  State is the configuration of an environement or how it appears
+**State:**  State is the configuration of an environement or how it appears
 
-*Action:* Actions refers to legal moves and agent can perform in a particular state
+**Action:** Actions refers to legal moves and agent can perform in a particular state
 
-*Goal Test:*  Since we are considering problems where are are trying to achieve a goal, we need a way to detemine if we have reached this goal in every stage. This is 
+**Goal Test:**  Since we are considering problems where are are trying to achieve a goal, we need a way to detemine if we have reached this goal in every stage. This is 
 the goal test.
 
-*Fronteir:* A fronteir can be thought of as a data stucture which contains nodes that are yet to be explored in our search for the solution.The type of data structure used is important dictates 
+**Fronteir:** A fronteir can be thought of as a data stucture which contains nodes that are yet to be explored in our search for the solution.The type of data structure used is important dictates 
 what type of algorthm being used as it dictates things like how nodes next to explored are added or removed from the fronter. 
 
-*Node:* A node can also be thought of as a data structure which holds data like value of a current node, what is the parent of this node , what actions where taken to get to the node etc.
+**Node:** A node can also be thought of as a data structure which holds data like value of a current node, what is the parent of this node , what actions where taken to get to the node etc.
 
-*Node Expansion:* Expanding a node means to generate other nodes from it. A scenario is a point in your search where multiple decisions can be made , here every decision becomes a node.
+**Node Expansion:** Expanding a node means to generate other nodes from it. A scenario is a point in your search where multiple decisions can be made , here every decision becomes a node.
 
 
 
@@ -156,6 +156,7 @@ the intitial position. Cosidering this value our pseudocode remains the same  as
 *Pseudocode for A* Search looks like this*
 
 > 1. We start with a fronteir that contains the intitial state(our start point in the searc)
+
 > Enter a loop
 >> Is the fronter empty? <br> if yes there is no solution to this problem . return
 
