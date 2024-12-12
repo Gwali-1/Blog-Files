@@ -39,14 +39,14 @@ Simply put, an informed search algorithm is an algorithm that uses or applies pr
 or solve it blindly, it relies on certain important details about the problem it is solving at every decision point. E.g. considering the race of an individual when searching for a criminal suspect or
 how geographically close a point is to a location when trying to plot directions to it.
 
-## **uninformed Search**
+## **Uninformed Search**
 
 Uninformed search, on the other hand, is a search algorithm that does not have problem-specific knowledge and, hence, attempts to solve the search problem systematically.
 <br>
 
 Before I explore examples of these algorithms, I’ll define some terms to provide more context, as they tend to appear a lot in explanations t going forward
 
-## components for context.
+## Components For Context.
 
 **Agent:** An agent can be thought of as an entity that acts on its environment in a particular state.
 
@@ -54,7 +54,7 @@ Before I explore examples of these algorithms, I’ll define some terms to provi
 
 **Action:** Actions refer to legal moves an agent can perform in a particular state.
 
-**Goal Test:** Since we are considering problems where are are trying to achieve a goal, we need a way to determine if we have reached this goal in every stage. This is
+**Goal Test:** Since we are considering problems where we are trying to achieve a goal, we need a way to determine if we have reached this goal in every stage. This is
 the goal test.
 
 **Frontier:** A frontier can be thought of as a data structure that contains nodes that are yet to be explored in our search for a solution. The type of data structure used is important and dictates
@@ -75,8 +75,8 @@ what type of algorithm is being used. This is because it affects things like how
 BFS is a search algorithm that explores the shallowest node in the frontier. What this means is in BFS, the nodes we pick to examine next are closer to the nodes
 that are being examined or nodes that are at a shallow level of depth before going further. As mentioned above the frontier is a data structure. To achieve this effect of selecting
 shallow nodes the data structure we employ here is a **Queue**. A queue has the *First in First out (FIFO)*principle so in effect the nodes that go into the fronteir freshly do not stay long as they are immediately
-explored next.<br> The nodes that enter the fronter and looked at at nodes that are close to the decision
-point.
+explored next.<br> The nodes that enter the fronter and looked at nodes that are close to the decision point.  For this reason if there solution lies deep in the search space BFS may explore many unnecessary
+nodes at a shallow level before finding the solution.Another limitation is that it tends to be memory-intensive as all nodes at a current depth are stored and tracked.
 
 _Pseudocode for BFS looks like this_
 
@@ -102,7 +102,7 @@ DFS is a search algorithm that explores nodes that are deep in the frontier. Wha
 further) without passing the goal state we backtrack to our last decision point. Because of how the algorithm explores the problem or search space you are only guaranteed to find a solution if the search space is finite else
 you'll keep going deep without stopping or backtracking. Just like above the pseudocode, DFS follows a similar strategy and the only significant difference is the type of data structure it uses for a frontier. While the frontier used
 in BFS is a **Queue**, DFS uses a **Stack**. Stack data structure follows the principle _Last in First out_ and so the effect this has on the algorithm is that nodes that are picked and explored from are the ones
-further from the decision point
+further from the decision point.Note that this results in one of the limitations of this algorithm as the shortes path to a solution is not always guaranteed as you might end up with a suboptimal one path first.
 
 ---
 
