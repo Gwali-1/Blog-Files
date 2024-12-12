@@ -60,8 +60,8 @@ the goal test.
 **Frontier:** A frontier can be thought of as a data structure that contains nodes that are yet to be explored in our search for a solution. The type of data structure used is important and dictates
 what type of algorithm is being used. This is because it affects things like how next-to-be-explored nodes are added or removed from the frontier.
 
-**Node:** A node can also be thought of as a data structure that holds data like the value of a current node, what is the parent of this node, what actions were taken to get to the node, etc. fr example
-in a problem where we are trying to find distance to a location, a typical node might contain location cordinate values indicating where our agent at a point. 
+**Node:** A node can also be thought of as a data structure that holds data like the value of a current node, what is the parent of this node, what actions were taken to get to the node, etc. For example
+in a problem where we are trying to find directions to a location, a typical node might contain location cordinate values indicating where our agent at a point. 
 
 **Node Expansion:** Expanding a node means generating other nodes from it. A scenario is a point in your search where multiple decisions can be made, here every decision becomes a node.
 
@@ -75,8 +75,8 @@ in a problem where we are trying to find distance to a location, a typical node 
 
 BFS is a search algorithm that explores the shallowest node in the frontier. What this means is in BFS, the nodes we pick to examine next are closer to the nodes
 that are being examined or nodes that are at a shallow level of depth before going further. As mentioned above the frontier is a data structure. To achieve this effect of selecting
-shallow nodes the data structure we employ here is a **Queue**. A queue has the *First in First out (FIFO)*principle so in effect the nodes that go into the fronteir freshly do not stay long as they are immediately
-explored next.<br> The nodes that enter the fronter and looked at nodes that are close to the decision point.  For this reason if there solution lies deep in the search space BFS may explore many unnecessary
+shallow nodes the data structure we employ here is a **Queue**. A queue has the *First in First out (FIFO)* principle so in effect the nodes that go into the fronteir freshly do not stay long as they are immediately
+explored next.<br> The nodes that enter the froniter and explored are the nodes that are close to the decision point.  For this reason if there solution lies deep in the search space BFS may explore many unnecessary
 nodes at a shallow level before finding the solution.Another limitation is that it tends to be memory-intensive as all nodes at a current depth are stored and tracked.
 
 _Pseudocode for BFS looks like this_
@@ -86,13 +86,13 @@ _Pseudocode for BFS looks like this_
 > 2. Enter a loop
 
 > 3. Is the frontier empty?
->    > If yes, there is no solution to this problem. Return
+>> If yes, there is no solution to this problem. Return
 
 > 4. Take a node from the frontier
 
 > 5. Check if this is the solution node by doing a goal test on it
->    > If yes return node as the solution
->    > If not expand the node and add the children nodes to the frontier
+>> If yes return node as the solution
+>> If not expand the node and add the children nodes to the frontier
 
 Note that the above pseudocode is simplified and, in some situations, to prevent a recursive node expansion situation where we keep adding nodes that have already been expanded back to the frontier
 we use a set data structure to keep track of all expanded nodes. So then any node that goes into the frontier must not be present in the set of expanded nodes.
