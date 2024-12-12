@@ -92,6 +92,7 @@ _Pseudocode for BFS looks like this_
 
 > 5. Check if this is the solution node by doing a goal test on it
 >> If yes return node as the solution
+
 >> If not expand the node and add the children nodes to the frontier
 
 Note that the above pseudocode is simplified and, in some situations, to prevent a recursive node expansion situation where we keep adding nodes that have already been expanded back to the frontier
