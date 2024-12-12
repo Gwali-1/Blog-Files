@@ -101,10 +101,10 @@ we use a set data structure to keep track of all expanded nodes. So then any nod
 2. _Depth First Search (DFS)_
 
 DFS is a search algorithm that explores nodes that are deep in the frontier. What this means is in DFS we keep exploring the frontier or search space deeply until when we hit a wall(can't go deep any
-further) without passing the goal state we backtrack to our last decision point. Because of how the algorithm explores the problem or search space you are only guaranteed to find a solution if the search space is finite else
-you'll keep going deep without stopping or backtracking. Just like above the pseudocode, DFS follows a similar strategy and the only significant difference is the type of data structure it uses for a frontier. While the frontier used
+further) without passing the goal state, we then backtrack to our last decision point. Because of how the algorithm explores the problem or search space you are only guaranteed to find a solution if the search space is finite else
+you might keep going deep without stopping or backtracking. Just like above the pseudocode, DFS follows a similar strategy and the only significant difference is the type of data structure it uses for a frontier. While the frontier used
 in BFS is a **Queue**, DFS uses a **Stack**. Stack data structure follows the principle _Last in First out_ and so the effect this has on the algorithm is that nodes that are picked and explored from are the ones
-further from the decision point.Note that this results in one of the limitations of this algorithm as the shortes path to a solution is not always guaranteed as you might end up with a suboptimal one path first.
+further from the decision point.Note that this results in one of the limitations of this algorithm as the shortest path to a solution is not always guaranteed as you might end up with a suboptimal one path first.
 
 ---
 
@@ -115,7 +115,7 @@ further from the decision point.Note that this results in one of the limitations
 As stated above, an informed search algorithm uses problem-specific information to help find the solution more quickly and efficiently. If you observe from the above-uninformed algorithms, the mechanisms of decision-making to select
 a node from the frontier determines how close we get to the solution and how long it takes us to get there, hence this is an important consideration that will help improve the efficiency of a search algorithm.<br>
 
-GBFS is a search algorithm that chooses a node from the frontier to explore based on an estimate provided by a **heuristic function**(h(n)). A heuristic function gives a value by using problem-specific
+GBFS is a search algorithm that chooses a node from the frontier to explore based on an estimate provided by a **heuristic function (h(n))**. A heuristic function gives a value by using problem-specific
 information plus other factors, e.g., the state we are currently in. This means when adding nodes to a frontier we will have to consider this estimated value to ensure that nodes are selected
 based on how little or small the value is as this value dictates how close or far we are from the solution. The type of data structure we use in a GBFS is a **priority queue**.
 
@@ -132,6 +132,7 @@ _Pseudocode for GBFS looks like this_
 
 > 5. Check if this is the solution node by doing a goal test.
 >    > If yes, return node as the solution
+
 >    > If not expand the node and add the children nodes to the frontier **based on the value as provided by h(n) / heuristic**
 
 As you can see, the code structure will be similar to the one described for the uninformed search examples but with a slight difference.
