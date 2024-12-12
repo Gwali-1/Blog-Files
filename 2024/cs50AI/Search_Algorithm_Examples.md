@@ -166,3 +166,11 @@ _Pseudocode for A_ Search looks like this\*
 ### In conclusion
 
 The first lecture explored an approach to designing and programming a system to solve particular types of problems. It demonstrated that through search algorithms, we can simulate the ability of decision-making and allow machines to navigate a problem space systematically or using problem-specific knowledge that is encoded into it.
+
+
+### Links
+
+* [What is the difference between informed and uninformed searches?](https://stackoverflow.com/questions/39760905/what-is-the-difference-between-informed-and-uninformed-searches)
+* [The Informed vs. Uninformed Search Algorithms](https://www.baeldung.com/cs/informed-vs-uninformed-search)
+* [Lecture 0 notes](https://cs50.harvard.edu/ai/2024/notes/0/)
+
