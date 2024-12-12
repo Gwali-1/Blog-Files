@@ -143,7 +143,7 @@ based on how little or small the value is as this value dictates how close or fa
 
 > 5. Check if this is the solution node by  doing a goal test on it 
 >> if yes return node as the solution 
->> if not expand the node and add the children nodes to the fronteir **based on the value as provided by h(n) / heurtistic **
+>> if not expand the node and add the children nodes to the fronteir **based on the value as provided by h(n) / heurtistic**
 
 
 As you can see the code structure will be similar to the one described for out uninformed search examples but with a slight difference.
@@ -169,10 +169,10 @@ the intitial position. Cosidering this value our pseudocode remains the same  as
 > 3. Is the fronter empty?
 >> If yes there is no solution to this problem . return
 
-> 4. Take a node from the fronteir  *with the smallest h(n + g(n)) value*
+> 4. Take a node from the fronteir  **with the smallest h(n + g(n)) value**
 > 5. Check if this is the solution node by  doing a goal test on it 
 >> If yes return node as the solution 
->> If not expand the node and add the children nodes to the fronteir *based on the value as provided by h(n) + g(n)*
+>> If not expand the node and add the children nodes to the fronteir **based on the value as provided by h(n) + g(n)**
 
 
 ---
