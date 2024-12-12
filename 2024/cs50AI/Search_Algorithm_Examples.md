@@ -142,7 +142,7 @@ The frontier is now a priority queue, and we add and select nodes to the frontie
 
 Just like the GBFS algorithm, the A* search algorithm also uses a priority queue as the data structure of its frontier but now we pick a node to expand or explore based on the value provided by **g(n) + h(n)**.
 From above we know that **h(n)** is the heuristic function and gives us an estimate of how far or close we are to the solution but what is **g(n)**.<br>
-**g(n)** is yet another function that gives us a value to consider. The efficiency of a GBFS is determined by how good the heuristic function you have. It is fast, but in the case where you have a poor heuristic, it is flawed.
+**g(n)** is yet another function that gives us a value to consider. The efficiency of a GBFS is determined by how good the heuristic function you have is. It is fast, but in the case where you have a poor heuristic, it is flawed.
 A* search algorithm is an improvement that tends to do away with the sole dependence on the heuristic and considers another value which is _g(n)_. Where _g(n)_ can be thought of as the cost it takes to reach the node to explore next, from
 the initial position of the search. Considering this value, our pseudocode remains almost the same with a slight difference.
 
@@ -165,4 +165,4 @@ _Pseudocode for A_ Search looks like this\*
 
 ### In conclusion
 
-The first lecture explored an approach to designing a machine through software to solve particular types of problems. It demonstrated that through good algorithms, we can simulate the ability of decision-making and allow machines to navigate a problem space systematically or use problem-specific knowledge that is encoded into it.
+The first lecture explored an approach to designing and programming a system to solve particular types of problems. It demonstrated that through search algorithms, we can simulate the ability of decision-making and allow machines to navigate a problem space systematically or using problem-specific knowledge that is encoded into it.
