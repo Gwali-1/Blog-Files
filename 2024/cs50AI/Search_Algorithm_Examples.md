@@ -51,31 +51,129 @@ how geograhically close a point is to a location when tring to plot directions t
 
 Uninformed search on the other hand is a search algorithm that does not have problem specific knowledge hence attempts to solve the search problem systematically.
 
+<br>
 
+Before i explore examples of these algorithms ill define some terms in other to provide context as they appear in explanations a lot going forward
 
-
-Starting with uninformed algorithms, let's explore some examples but before we proceed let's define a few important 
 components for context.
 ---
-*Agent:*
+*Agent:* An agent can be thought of an entity that acts on it's environement in particular state
 
-*State:* 
+*State:*  State is the configuration of an environement or how it appears
 
-*Action:*
+*Action:* Actions refers to legal moves and agent can perform in a particular state
 
-*Goal Test:* 
+*Goal Test:*  Since we are considering problems where are are trying to achieve a goal, we need a way to detemine if we have reached this goal in every stage. This is 
+the goal test.
+
+*Fronteir:* A fronteir can be thought of as a data stucture which contains nodes that are yet to be explored in our search for the solution.The type of data structure used is important dictates 
+what type of algorthm being used as it dictates things like how nodes next to explored are added or removed from the fronter. 
+
+*Node:* A node can also be thought of as a data structure which holds data like value of a current node, what is the parent of this node , what actions where taken to get to the node etc.
+
+*Node Expansion:* Expanding a node means to generate other nodes from it. A scenario is a point in your search where multiple decisions can be made , here every decision becomes a node.
+
+
 
 ---
+
+*Starting with examples of uninformed search algorthms* we have 
 
 1. *Breadth First Search (BFS)*
 
 BFS is a search alorthms that explores the shallowest node in the fronteir. What this means is in BFS ,the nodes we pick to examine next are closer to the node 
 that are being examined or nodes that are at a level of depth before going further. As mentioned above the fronteir is a datastrcuture. In other tp achieve this effect of selecting 
 shallow nodes the data structure we emplre here is a Queue. Queue has first in first out principle so in effect the nodes that go into the fronteir  freshly do not stay long as they are immediatley 
-explored next.
+explored next.<br> The fronteir of a BFS is a queue. Queue data structures follor a first in first out principle and hence nodes that enter the fronter  and looked at at nodes that are close to the decision 
+point.
+
+*Pseudocode for BFS looks like this*
+
+> 1. We start with a fronteir that contains the intitial state(our start point in the searc)
+> Enter a loop
+>> Is the fronter empty? <br> if yes there is no solution to this problem . return
+
+> Take a node from the fronteir 
+> Check if this is the solution node by  doing a goal test on it 
+>> if yes return node as the solution 
+>> if not expand the node and add the children nodes to the fronteir 
+
+
+Note that above pseudocode is simplified and in some situations in other to prevent a recursive node explansion situation where we keep adding nodes that have already been expanded back to the Fronteir
+we use a set data structure to keep track of all exp,anded nodes. Then any node that goes into  the fronteir must not exist in the set of expanded nodes.
+
+
 
 
 2. *Depth First Searh (DFS)*
+DFS is a searhc algorithm that explores nodes that are deep in the fronter. what this means is in DFS we keep exporing the fronteir or search space in a deep fashion and when we hit a wall(can't go deep any
+futher) without passing the goal state we backtrack to our last decision point. Because of how the algorithm explores the problem or search space you are only guranteed to find a solution if search space is finite or
+you'll keep going deep without stoping or backtracing. Just like above the pseudocode of DFS follows a similar strategy and the only significant difference is the type of data structure the fronteir is. While the fronteir used 
+in BFS is a **Queue**, DFS uses a **Stack**. Stack data structure follows the principle Last in first out and so the effect this has on out algorthm is the nodes which are picked and explored from  the fronteir are the ones 
+further from the decision point 
+
+
+
+---
+*Examples of informed search algorthms* 
+
+1. Greedy Best First Algorthm (GBFS)
+As stated  above , informed search algorithm uses problem specific information to help find the solution more quickly and efficiently. If you observe from the above uninformed algorthms, the mechnaisms of decision making to select 
+a node from the fronteir determines how close we get to the solution and how long it takes us to get there hence this is an important consideration that will improve the efficiciency of an algorithm.<br>
+
+GBFS is a search algorthm that chooses a node from the fronteir to explore based on estimate provided by a **heurtistic function**(h(n)). A heurtistic function gives as a value by using problem specific
+information plus other factores eg like the node or state we are currently in.  This means when adding nodes to a fronteir we will have to consider this estimated valkue to ensure that  nodes are selected 
+based on how little or small the value is as this value dictates how close or far we are from the solution. The type of data structure we shall use in a GBFS is a **priority queue**. 
+
+
+*Pseudocode for GBFS looks like this*
+
+> 1. We start with a fronteir that contains the intitial state(our start point in the searc)
+> Enter a loop
+>> Is the fronter empty? <br> if yes there is no solution to this problem . return
+
+> Take a node from the fronteir *with the smallest h(n) value*
+> Check if this is the solution node by  doing a goal test on it 
+>> if yes return node as the solution 
+>> if not expand the node and add the children nodes to the fronteir *based on the value as provided by h(n) / heurtistic *
+
+
+As you can see the code structure will be similar to the one described for out uninformed search examples but with a slight difference.
+The frontier is now a priority queue and we add nodes to the fronteir based on their heurtistic value(an estimate of how far we are from the solution)
+
+
+
+
+2. A* Search Algorthm
+Just like GBFS algorthm , the A* search algorthm also uses a priority queue as the data structure of it's fronteir but now we pick a node to expand based on the value provided by g(n) + h(n).
+From above we know that h(n) is the heurtistic function and gives us an estimate of how far or close we are from the solution but what is g(n).<br>
+g(n) is yet another function that gives us a value to consider. The efficiciency of a GBFS  is determined by good a heurtistic function you have.It is fast but in the case where you have a poor heurtistic it is flawed.
+A* search algorithm is an improvement that tends to do away with the sole dependence on the heurtistic and cosiders another value which is g(n). Where g(n) can be thought of as the cost it took to reach the node to explored from 
+the intitial position. Cosidering this value our pseudocode remains the same  as above with a slight difference
+
+
+
+*Pseudocode for A* Search looks like this*
+
+> 1. We start with a fronteir that contains the intitial state(our start point in the searc)
+> Enter a loop
+>> Is the fronter empty? <br> if yes there is no solution to this problem . return
+
+> Take a node from the fronteir  *with the smallest h(n + g(n)) value*
+> Check if this is the solution node by  doing a goal test on it 
+>> if yes return node as the solution 
+>> if not expand the node and add the children nodes to the fronteir *based on the value as provided by h(n) + g(n)*
+
+
+---
+
+### In conclusion
+
+
+
+
+
+
 
 
 
