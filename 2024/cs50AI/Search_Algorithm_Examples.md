@@ -44,7 +44,7 @@ how geographically close a point is to a location when trying to plot directions
 Uninformed search, on the other hand, is a search algorithm that does not have problem-specific knowledge and, hence, attempts to solve the search problem systematically.
 <br>
 
-Before I explore examples of these algorithms, I’ll define some terms to provide more context, as they tend to appear a lot in explanations t going forward
+Before I explore examples of these algorithms, I’ll define some terms to provide more context, as they tend to appear a lot in explanations  going forward
 
 ## Components For Context.
 
@@ -60,9 +60,10 @@ the goal test.
 **Frontier:** A frontier can be thought of as a data structure that contains nodes that are yet to be explored in our search for a solution. The type of data structure used is important and dictates
 what type of algorithm is being used. This is because it affects things like how next-to-be-explored nodes are added or removed from the frontier.
 
-**Node:** A node can also be thought of as a data structure that holds data like the value of a current node, what is the parent of this node, what actions were taken to get to the node, etc.
+**Node:** A node can also be thought of as a data structure that holds data like the value of a current node, what is the parent of this node, what actions were taken to get to the node, etc. fr example
+in a problem where we are trying to find distance to a location, a typical node might contain location cordinate values indicating where our agent at a point. 
 
-**Node Expansion:** Expanding a node means generating other nodes from it. A scenario is a point in your search where multiple decisions can be made, here every decision becomes a node.  ** Decision Point:** This is a point in your search where you have to choose which node to explore next.
+**Node Expansion:** Expanding a node means generating other nodes from it. A scenario is a point in your search where multiple decisions can be made, here every decision becomes a node.
 
 **Decision Point:** This is a point in your search where you have to choose which node to explore next.
 
