@@ -126,14 +126,14 @@ _Pseudocode for GBFS looks like this_
 > 2. Enter a loop.
 
 > 3. Is the frontier empty?
->    > If yes there is no solution to this problem. Return.
+>> If yes there is no solution to this problem. Return.
 
 > 4. Select a node from the frontier **with the smallest h(n) value**.
 
 > 5. Check if this is the solution node by doing a goal test.
->    > If yes, return node as the solution
+>> If yes, return node as the solution
 
->    > If not expand the node and add the children nodes to the frontier **based on the value as provided by h(n) / heuristic**
+>> If not expand the node and add the children nodes to the frontier **based on the value as provided by h(n) / heuristic**
 
 As you can see, the code structure will be similar to the one described for the uninformed search examples but with a slight difference.
 The frontier is now a priority queue, and we add and select nodes to the frontier based on their heuristic value(an estimate of how far we are from the solution)
