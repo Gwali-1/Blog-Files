@@ -132,14 +132,18 @@ based on how little or small the value is as this value dictates how close or fa
 
 *Pseudocode for GBFS looks like this*
 
-> 1. We start with a fronteir that contains the intitial state(our start point in the searc)
-> 2. Enter a loop
->> Is the fronter empty? <br> if yes there is no solution to this problem . return
+> 1. We start with a fronteir that contains the intitial state(our start point in the search)
 
-> 3. Take a node from the fronteir *with the smallest h(n) value*
-> Check if this is the solution node by  doing a goal test on it 
+> 2. Enter a loop
+
+> 3. Is the fronter empty? 
+>> if yes there is no solution to this problem . return
+
+> 4. Take a node from the fronteir **with the smallest h(n) value**
+
+> 5. Check if this is the solution node by  doing a goal test on it 
 >> if yes return node as the solution 
->> if not expand the node and add the children nodes to the fronteir *based on the value as provided by h(n) / heurtistic *
+>> if not expand the node and add the children nodes to the fronteir **based on the value as provided by h(n) / heurtistic **
 
 
 As you can see the code structure will be similar to the one described for out uninformed search examples but with a slight difference.
@@ -159,15 +163,16 @@ the intitial position. Cosidering this value our pseudocode remains the same  as
 
 *Pseudocode for A* Search looks like this*
 
-> 1. We start with a fronteir that contains the intitial state(our start point in the searc)
+> 1. We start with a fronteir that contains the intitial state(our start point in the search)
 
-> Enter a loop
->> Is the fronter empty? <br> if yes there is no solution to this problem . return
+> 2. Enter a loop
+> 3. Is the fronter empty?
+>> If yes there is no solution to this problem . return
 
-> Take a node from the fronteir  *with the smallest h(n + g(n)) value*
-> Check if this is the solution node by  doing a goal test on it 
->> if yes return node as the solution 
->> if not expand the node and add the children nodes to the fronteir *based on the value as provided by h(n) + g(n)*
+> 4. Take a node from the fronteir  *with the smallest h(n + g(n)) value*
+> 5. Check if this is the solution node by  doing a goal test on it 
+>> If yes return node as the solution 
+>> If not expand the node and add the children nodes to the fronteir *based on the value as provided by h(n) + g(n)*
 
 
 ---
