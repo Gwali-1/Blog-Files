@@ -152,7 +152,7 @@ _Pseudocode for A_ Search looks like this\*
 > 3. Is the frontier empty?
 >    > If yes there is no solution to this problem. Return.
 
-> 4. Take a node from the frontier **with the smallest h(n + g(n)) value**.
+> 4. Take a node from the frontier **with the smallest h(n)+ g(n) value**.
 
 > 5. Check if this is the solution node by doing a goal test on it
 >    > If yes return node as the solution
