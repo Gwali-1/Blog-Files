@@ -8,7 +8,6 @@ tags: ["GitHub", "Webhooks", "Automation"]
 summary: "Learn how to handle GitHub push events and fetch updated files programmatically."
 ---
 
-Here’s the actual blog content written in Markdown.
 
 ## Introduction
 
