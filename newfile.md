@@ -12,4 +12,4 @@ Here’s the actual blog content written in Markdown.
 
 ## Introduction
 
-GitHub webhooks are a powerful way to automate actions on repository events...
+GitHub webhooks are a powerful way to automate actions on repository events.. and things
