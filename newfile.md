@@ -1,9 +1,10 @@
 ---
 title: "Understanding GitHub Webhooks"
 slug: "github-webhooks"
-date: "2025-07-06"
+date: "2026-07-06"
 tags: ["GitHub", "Webhooks", "Automation"]
 ---
+
 
 
 
