@@ -1,6 +1,6 @@
 {
   "Name": "NetUtils",
-  "Description": "the collection of C# utilities for working with .NET networking, sockets",
-  "Url": "https://github.com/yourusername/netutils",
+  "Description": "C# utilities for working with .NET networking, sockets",
+  "Url": "https://github.com/yourusername/",
   "Image": "https://yourcdn.com/images/netutils-banner.png"
 }
