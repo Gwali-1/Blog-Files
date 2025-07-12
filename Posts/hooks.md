@@ -7,7 +7,7 @@ tags: [GitHub, Webhooks]
 
 # Handling GitHub Webhooks in C
 
-GitHub webhooks let you trigger actions when events happen in a repository, like when someone pushes a commit.
+Can  let you trigger actions when events happen in a repository, like when someone pushes a commit.
 
 To start, you'll need to:
 
