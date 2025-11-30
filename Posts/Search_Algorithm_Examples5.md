@@ -1,5 +1,5 @@
 ---
-title: "Search Algorithms 3"
+title: "Search Algorithms 5"
 slug: "search-algorithmsss"
 date: "2025-07-06"
 tags: [AI, Search]
